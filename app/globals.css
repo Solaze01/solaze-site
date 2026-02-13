@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 24px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes gentle-float {
+    0%, 100% {
+      transform: translate3d(0, 0, 0);
+    }
+    50% {
+      transform: translate3d(0, -8px, 0);
+    }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+    will-change: transform, opacity;
+  }
+
+  .reveal-soft {
+    opacity: 0;
+    will-change: opacity;
+  }
+
+  .reveal.is-visible {
+    animation: fade-up 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .reveal-soft.is-visible {
+    animation: fade-in 900ms ease forwards;
+  }
+
+  .float-soft {
+    animation: gentle-float 5s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  .hover-lift {
+    transition: transform 240ms ease, box-shadow 240ms ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px hsl(var(--foreground) / 0.12);
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 204 25% 16%;
+    --card: 160 6% 97%;
+    --card-foreground: 204 25% 16%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 204 25% 16%;
+    --primary: 166 40% 31%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 170 42% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 160 10% 95%;
+    --muted-foreground: 204 10% 40%;
+    --accent: 170 42% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 160 10% 90%;
+    --input: 160 10% 90%;
+    --ring: 166 40% 31%;
+    --chart-1: 166 40% 31%;
+    --chart-2: 170 42% 50%;
+    --chart-3: 204 25% 16%;
+    --chart-4: 160 10% 95%;
+    --chart-5: 166 30% 45%;
+    --radius: 0.625rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 204 25% 16%;
+    --sidebar-primary: 166 40% 31%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 160 10% 95%;
+    --sidebar-accent-foreground: 204 25% 16%;
+    --sidebar-border: 160 10% 90%;
+    --sidebar-ring: 166 40% 31%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-soft,
+  .float-soft {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .hover-lift,
+  .hover-lift:hover {
+    transition: none !important;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+}
