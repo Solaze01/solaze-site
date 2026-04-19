@@ -10,14 +10,14 @@ export const metadata: Metadata = {
   title: 'Solaze — You Don\'t Have to Carry It Alone',
   description: 'Solaze is a student-led emotional support platform. Share your story anonymously, receive human guidance, and find strength in community.',
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/images/favicon.png',
+    icon: '/icon.png',
+    shortcut: '/icon.png',
+    apple: '/icon.png',
   },
 }
 
 export const viewport: Viewport = {
-  themeColor: '#2F6F62',
+  themeColor: '#132136',
   width: 'device-width',
   initialScale: 1,
 }

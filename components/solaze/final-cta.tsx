@@ -36,7 +36,7 @@ export function FinalCTA() {
                 href="https://t.me/solazecommunity"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover-lift inline-flex items-center gap-2 rounded-lg border border-primary-foreground/20 px-7 py-3.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary-foreground/10"
+                className="hover-lift inline-flex items-center gap-2 rounded-lg border border-primary-foreground/20 px-7 py-3.5 text-sm font-medium text-primary-foreground transition-colors hover:border-secondary hover:bg-secondary hover:text-secondary-foreground"
               >
                 Join the Community
               </Link>

@@ -59,7 +59,7 @@ export function Hero() {
               href="https://t.me/solazecommunity"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover-lift inline-flex items-center gap-2 rounded-lg border border-border bg-background px-7 py-3.5 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+              className="hover-lift inline-flex items-center gap-2 rounded-lg border border-border bg-background px-7 py-3.5 text-sm font-medium text-foreground transition-colors hover:border-secondary hover:bg-secondary hover:text-secondary-foreground"
             >
               Join Our Community
             </Link>

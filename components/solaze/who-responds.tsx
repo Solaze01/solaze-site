@@ -44,7 +44,7 @@ export function WhoResponds() {
           {/* Image */}
           <div className="reveal overflow-hidden rounded-2xl" style={{ animationDelay: "180ms" }}>
             <Image
-              src="/images/campus-quiet.jpg"
+              src="/images/campus-quiet-v2.jpg"
               alt="A peaceful campus setting reflecting the supportive environment of Solaze"
               width={600}
               height={500}

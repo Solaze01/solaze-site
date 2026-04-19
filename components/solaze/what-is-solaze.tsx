@@ -8,7 +8,7 @@ export function WhatIsSolaze() {
           {/* Image */}
           <div className="reveal overflow-hidden rounded-2xl" style={{ animationDelay: "80ms" }}>
             <Image
-              src="/images/support.jpg"
+              src="/images/support-v2.jpg"
               alt="A comforting moment of support between students"
               width={600}
               height={500}
